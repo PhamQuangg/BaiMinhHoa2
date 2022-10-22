@@ -23,4 +23,10 @@ class StudentController extends Controller
         $student->update(["fullname" =>$request->fullname,"birthday"=>$request->birthday,"address" => $request->address ]);
         return redirect("/");
     }
+    public function destroy($id){
+        $student=Student::find($id);
+        $student->delete();
+        return redirect('/');
+
+    }
 }

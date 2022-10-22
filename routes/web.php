@@ -17,3 +17,4 @@ use App\Http\Controllers\StudentController;
 Route::get('/', [StudentController::class, 'get_all_student']);
 Route::get('/edit/{id}', [StudentController::class, 'get_student_by_id']);
 Route::put('/edit/{id}', [StudentController::class, 'edit']);
+Route::delete('/destroy/{id}',[StudentController::class, 'destroy']);

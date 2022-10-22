@@ -19,7 +19,7 @@
 					@forelse($students as $student)
 					<tr>
 						<td>{!! $student->id !!}</td>
-						<td class="pr-5 text-right">{!! $student->fullname !!}</td>
+						<td class="pr-5 text-left">{!! $student->fullname !!}</td>
 						<td>{!! $student->birthday !!}</td>
 						<td>{!! $student->address !!}</td>
 						<td><a href="edit/{!! $student->id !!}"
@@ -59,7 +59,7 @@
 <script>
 function showModel(id) {
 	var frmDelete = document.getElementById("delete-frm");
-	frmDelete.action = 'student/'+id;
+	frmDelete.action = 'destroy/'+id;
 	var confirmationModal = document.getElementById("deleteConfirmationModel");
 	confirmationModal.style.display = 'block';
 	confirmationModal.classList.remove('fade');
